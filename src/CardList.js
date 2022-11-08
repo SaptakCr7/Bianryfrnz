@@ -1,0 +1,22 @@
+/* eslint-disable no-unused-vars */
+import React from "react";
+import Card from "./Card";
+
+const cardList = ({ robots }) => {
+  return (
+    <div>
+      {robots.map((user, i) => {
+        return (
+          <Card
+            key={i}
+            id={robots[i].id}
+            name={robots[i].name}
+            username={robots[i].username}
+            email={robots[i].email}
+          />
+        );
+      })}
+    </div>
+  );
+};
+export default cardList;
